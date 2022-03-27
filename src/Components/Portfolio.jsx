@@ -2,10 +2,11 @@
 import Fade from 'react-reveal/Fade';
 import React, {useState} from 'react';
 import styled from 'styled-components';
+import NoImg from '../Images/NoCover.png';
 import ImgOne from '../Images/Portfolio Gallery/01.png';
 import ImgTwo from '../Images/Portfolio Gallery/02.png';
-import ImgThree from '../Images/Portfolio Gallery/03.png';
 import ImgFour from '../Images/Portfolio Gallery/04.png';
+import ImgThree from '../Images/Portfolio Gallery/03.png';
 
 
 
@@ -334,17 +335,17 @@ export default function Portfolio() {
                     </Fade>
                     <Fade bottom>
                         <ItemFive>
-                            <Img src={ImgTwo}/>
+                            <Img src={NoImg}/>
                             <LayerFive isHoveredFive={isHoveredFive} target="_blank" onMouseOver={HoverHandlerFive} onMouseLeave={HoverHandlerFive} href="">
-                                Some Useless Sh!t
+                                In Progress...
                             </LayerFive>
                         </ItemFive>
                     </Fade>
                     <Fade right distance="50px">
                         <ItemSix>
-                            <Img src={ImgThree}/>
+                            <Img src={NoImg}/>
                             <LayerSix isHoveredSix={isHoveredSix} target="_blank" onMouseOver={HoverHandlerSix} onMouseLeave={HoverHandlerSix} href="">
-                                Some Useless Sh!t
+                                In Progress...
                             </LayerSix>
                         </ItemSix>
                     </Fade>
