@@ -24,7 +24,7 @@ const MainWrapper = styled.section`
 function App() {
 
   const styleDarkMode = localStorage.getItem('darkMode');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const ThemeHandler = () => {
     setDarkMode(!darkMode)
     localStorage.setItem('darkMode', darkMode);
