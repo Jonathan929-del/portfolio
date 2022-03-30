@@ -104,7 +104,7 @@ const Box = styled.div`
     flex-direction:column;
     justify-content:center;
     transition:0.2s linear;
-    background-color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#1d1a22' : '#ebebeb'};
+    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
 
     &:hover{
         cursor:pointer;
@@ -134,7 +134,7 @@ const MiddleBox = styled.div`
     flex-direction:column;
     justify-content:center;
     transition:0.2s linear;
-    background-color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#1d1a22' : '#ebebeb'};
+    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
 
     &:hover{
         cursor:pointer;
@@ -204,7 +204,7 @@ const FacebookLink = styled.a`
     font-size:30px;
     position:relative;
     transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#fff' : '#000'};
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 
     &::before{
         height:0;
@@ -245,7 +245,7 @@ const InstaLink = styled.a`
     font-size:30px;
     position:relative;
     transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#fff' : '#000'};
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 
     &::before{
         height:0;
@@ -286,7 +286,7 @@ const LinkedLink = styled.a`
     font-size:30px;
     position:relative;
     transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#fff' : '#000'};
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 
     &::before{
         height:0;
@@ -327,7 +327,7 @@ const TwitterLink = styled.a`
     font-size:30px;
     position:relative;
     transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#fff' : '#000'};
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 
     &::before{
         height:0;
@@ -368,7 +368,7 @@ const GithubLink = styled.a`
     font-size:30px;
     position:relative;
     transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode == 'true' ? '#fff' : '#000'};
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 
     &::before{
         height:0;
@@ -601,7 +601,6 @@ export default function ContactMe({styleDarkMode}) {
     const ClickHandler = () => {
         setClicked(!clicked);
     }
-    console.log(clicked);
 
   return (
     <ContactSection id="contact-me">

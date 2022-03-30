@@ -105,6 +105,7 @@ const EastSide = styled.div`
     flex:1;
     display:flex;
     flex-direction:column;
+    justify-content:center;
 `
 
 const H2 = styled.h2`
