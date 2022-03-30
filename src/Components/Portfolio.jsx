@@ -144,6 +144,12 @@ const ItemSix = styled.div`
     position:relative;
 `
 
+const IamgeOne = styled.img`
+    width:100%;
+    height:50%;
+    border-radius:5px;
+`
+
 const Img = styled.img`
     width:100%;
     height:100%;
@@ -155,7 +161,7 @@ const LayerOne = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -174,7 +180,7 @@ const LayerTwo = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -193,7 +199,7 @@ const LayerThree = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -212,7 +218,7 @@ const LayerFour = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -231,7 +237,7 @@ const LayerFive = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -250,7 +256,7 @@ const LayerSix = styled.a`
     left:0;
     z-index:2;
     width:100%;
-    height:100%;
+    height:98%;
     display:flex;
     color:#fff;
     cursor:pointer;
@@ -303,7 +309,7 @@ export default function Portfolio() {
                 <PortfolioWrapper>
                     <Fade left>
                         <ItemOne>
-                            <Img src={ImgOne}/>
+                            <IamgeOne src={ImgOne}/>
                             <LayerOne isHoveredOne={isHoveredOne} target="_blank" onMouseOver={HoverHandlerOne} onMouseLeave={HoverHandlerOne} href="https://jonathan929-del.github.io/jobook-client-side/#/">
                                 Social Media
                             </LayerOne>
