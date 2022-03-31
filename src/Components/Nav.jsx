@@ -17,7 +17,7 @@ const NavContainer = styled.nav`
     width:100%;
     height:70px;
     position:fixed;
-    border-bottom:1px solid #747474;
+    /* border-bottom:1px solid #747474; */
     background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#222429' : '#f8faff'};
 
     @media screen and (max-width:610px){
