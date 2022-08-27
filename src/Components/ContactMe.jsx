@@ -4,8 +4,8 @@ import Fade from 'react-reveal/Fade';
 import {MdEmail} from 'react-icons/md';
 import styled from 'styled-components';
 import {HiLocationMarker} from 'react-icons/hi';
-import {BsFillTelephoneFill, BsFacebook} from 'react-icons/bs';
-import {AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiFillGithub} from 'react-icons/ai';
+import {BsFillTelephoneFill, BsFacebook, BsStackOverflow} from 'react-icons/bs';
+import {AiFillLinkedin, AiFillTwitterCircle, AiFillGithub} from 'react-icons/ai';
 
 
 
@@ -225,7 +225,7 @@ const StyledLink = styled.a`
     color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
 `
 const FacebookContainer = styled.div`
-    left:-20px;
+    left:-25px;
     bottom:40px;
     width:100px;
     font-size:12px;
@@ -236,8 +236,8 @@ const FacebookContainer = styled.div`
         font-size:11px;
     }
 `
-const InstagramContainer = styled.div`
-    left:-35px;
+const StackoverflowContainer = styled.div`
+    left:-10px;
     bottom:40px;
     width:100px;
     font-size:12px;
@@ -245,7 +245,6 @@ const InstagramContainer = styled.div`
     position:absolute;
 
     @media screen and (max-width:400px){
-        left:-30px;
         font-size:11px;
     }
 `
@@ -270,7 +269,9 @@ const TwitterContainer = styled.div`
     position:absolute;
 
     @media screen and (max-width:400px){
-        font-size:11px;
+        width:70px;
+        left:-25px;
+        font-size:10px;
     }
 `
 const GithubContainer = styled.div`
@@ -282,9 +283,8 @@ const GithubContainer = styled.div`
     position:absolute;
 
     @media screen and (max-width:400px){
-        width:70px;
-        left:-25px;
-        font-size:9px;
+        font-size:11px;
+        left:-30px;
     }
 `
 const FacebookIconContainer = styled.div`
@@ -292,10 +292,10 @@ const FacebookIconContainer = styled.div`
     transition:0.2s linear;
     color:${({isHovered}) => isHovered === 'facebook' ? '#08ceb1' : ''};
 `
-const InstagramIconContainer = styled.div`
+const StackoverflowIconContainer = styled.div`
     font-size:25px;
     transition:0.2s linear;
-    color:${({isHovered}) => isHovered === 'instagram' ? '#08ceb1' : ''};
+    color:${({isHovered}) => isHovered === 'stackoverflow' ? '#08ceb1' : ''};
 `
 const LinkedinIconContainer = styled.div`
     font-size:25px;
@@ -352,26 +352,6 @@ export default function ContactMe({styleDarkMode}) {
                             </Top>
                             <Bottom>
                                 <Fade left>
-                                    <StyledLink href="https://www.facebook.com/profile.php?id=100058864790778" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('facebook')} onMouseLeave={leaveHandler}>
-                                        <FacebookIconContainer isHovered={isHovered}>
-                                            <BsFacebook />
-                                        </FacebookIconContainer>
-                                        {isHovered === 'facebook' &&
-                                            <FacebookContainer>
-                                                <Fade top duration={500}>Jonathan Adel</Fade>
-                                            </FacebookContainer>
-                                        }
-                                    </StyledLink>
-                                    <StyledLink href="https://www.instagram.com/jonathanadelll/" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('instagram')} onMouseLeave={leaveHandler}>
-                                        <InstagramIconContainer isHovered={isHovered}>
-                                            <AiFillInstagram />
-                                        </InstagramIconContainer>
-                                        {isHovered === 'instagram' &&
-                                            <InstagramContainer>
-                                                <Fade top duration={500}>@jonathanadelll</Fade>
-                                            </InstagramContainer>
-                                        }
-                                    </StyledLink>
                                     <StyledLink href="https://www.linkedin.com/in/jonathan-adel-5b684620b/" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('linkedin')} onMouseLeave={leaveHandler}>
                                         <LinkedinIconContainer isHovered={isHovered}>
                                             <AiFillLinkedin />
@@ -382,16 +362,6 @@ export default function ContactMe({styleDarkMode}) {
                                             </LinkedinContainer>
                                         }
                                     </StyledLink>
-                                    <StyledLink href="https://twitter.com/JonathanAdel3" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('twitter')} onMouseLeave={leaveHandler}>
-                                        <TwitterIconContainer isHovered={isHovered}>
-                                            <AiFillTwitterCircle />
-                                        </TwitterIconContainer>
-                                        {isHovered === 'twitter' &&
-                                            <TwitterContainer>
-                                                <Fade top duration={500}>@JonathanAdel3</Fade>
-                                            </TwitterContainer>
-                                        }
-                                    </StyledLink>
                                     <StyledLink href="https://github.com/Jonathan929-del" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('github')} onMouseLeave={leaveHandler}>
                                         <GithubIconContainer isHovered={isHovered}>
                                             <AiFillGithub />
@@ -400,6 +370,36 @@ export default function ContactMe({styleDarkMode}) {
                                             <GithubContainer>
                                                 <Fade top duration={500}>Jonathan929-del</Fade>
                                             </GithubContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://stackoverflow.com/users/15214401/jonathan" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('stackoverflow')} onMouseLeave={leaveHandler}>
+                                        <StackoverflowIconContainer isHovered={isHovered}>
+                                            <BsStackOverflow />
+                                        </StackoverflowIconContainer>
+                                        {isHovered === 'stackoverflow' &&
+                                            <StackoverflowContainer>
+                                                <Fade top duration={500}>Jonathan</Fade>
+                                            </StackoverflowContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://www.facebook.com/profile.php?id=100058864790778" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('facebook')} onMouseLeave={leaveHandler}>
+                                        <FacebookIconContainer isHovered={isHovered}>
+                                            <BsFacebook />
+                                        </FacebookIconContainer>
+                                        {isHovered === 'facebook' &&
+                                            <FacebookContainer>
+                                                <Fade top duration={500}>Jonathan Adel</Fade>
+                                            </FacebookContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://twitter.com/JonathanAdel3" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('twitter')} onMouseLeave={leaveHandler}>
+                                        <TwitterIconContainer isHovered={isHovered}>
+                                            <AiFillTwitterCircle />
+                                        </TwitterIconContainer>
+                                        {isHovered === 'twitter' &&
+                                            <TwitterContainer>
+                                                <Fade top duration={500}>@JonathanAdel3</Fade>
+                                            </TwitterContainer>
                                         }
                                     </StyledLink>
                                 </Fade>
