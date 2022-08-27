@@ -1,9 +1,8 @@
 // Imports
 import Fade from 'react-reveal/Fade';
 import styled from "styled-components";
-import {FaBrain} from 'react-icons/fa';
 import {BiCodeAlt} from 'react-icons/bi';
-import {RiPencilFill} from 'react-icons/ri';
+import {AiFillDatabase, AiOutlineDesktop} from 'react-icons/ai';
 
 
 
@@ -73,6 +72,7 @@ const ServicesWrapper = styled.div`
 `
 
 const Box = styled.div`
+    height:100%;
     display:flex;
     border-radius:10px;
     align-items:center;
@@ -82,7 +82,6 @@ const Box = styled.div`
     background-color:#08ceb1;
 
     &:hover{
-        cursor:pointer;
         transform:scale(1.05);
         background-color:#03e7c5;
     }
@@ -97,7 +96,7 @@ const IconOne = styled(BiCodeAlt)`
     }
 `
 
-const IconTwo = styled(RiPencilFill)`
+const IconTwo = styled(AiFillDatabase)`
     font-size:40px;
     margin-top:20px;
 
@@ -106,7 +105,7 @@ const IconTwo = styled(RiPencilFill)`
     }
 `
 
-const IconThree = styled(FaBrain)`
+const IconThree = styled(AiOutlineDesktop)`
     font-size:40px;
     margin-top:20px;
 
@@ -122,6 +121,10 @@ const Title = styled.h2`
     @media screen and (max-width:1100px){
         font-size:20px;
     }
+
+    @media screen and (max-width:600px){
+        font-size:17px;
+    }
 `
 
 const DescOne = styled.p`
@@ -136,6 +139,10 @@ const DescOne = styled.p`
 
     @media screen and (max-width:992px){
         margin-top:20px;
+    }
+
+    @media screen and (max-width:600px){
+        font-size:13px;
     }
 
     @media screen and (max-width:500px){
@@ -166,6 +173,10 @@ const DescTwo = styled.p`
     @media screen and (max-width:935px){
         margin-top:20px;
         margin-bottom:40px;
+    }
+
+    @media screen and (max-width:600px){
+        font-size:13px;
     }
 
     @media screen and (max-width:500px){
@@ -203,6 +214,10 @@ const DescThree = styled.p`
         margin-top:20px;
     }
 
+    @media screen and (max-width:600px){
+        font-size:13px;
+    }
+
     @media screen and (max-width:500px){
         width:90%;
         margin-top:15px;
@@ -227,22 +242,22 @@ export default function Services() {
                     <Fade left>
                         <Box>
                             <IconOne />
-                            <Title>Web Development</Title>
-                            <DescOne>I am a professional full-stack web developer, I work with ReactJs, NodeJs, ExpressJs, MongoDB and more skills. In addition of programming languages like Python</DescOne>
+                            <Title>Front-end development</Title>
+                            <DescOne>I am a professional front-end web developer, I build the user interface of the web page using Html, Css, JavaScript and other technologies like ReactJs, in addition of Css libraries like Bootstarp</DescOne>
                         </Box>
                     </Fade>
                     <Fade bottom>
                         <Box>
                             <IconTwo />
-                            <Title>Web Design</Title>
-                            <DescTwo>I am a web deisgner, I have great experience in Css, Sass and Bootstrap. I can make a full responsive web page with high-quality styling code</DescTwo>
+                            <Title>Back-end development</Title>
+                            <DescTwo>Specialized in NodeJs, ExpressJs and MongoDb to make a Rest API linked to a database to connect to the client side to make a fully dynamic website</DescTwo>
                         </Box>
                     </Fade>
                     <Fade right distance="90px">
                         <Box>
                             <IconThree />
-                            <Title>UI/UX Design</Title>
-                            <DescThree>I know the basic coloring rules, font sizes and positioning systems. I can create a creative web design that suits your project's subject</DescThree>
+                            <Title>Full-stack development</Title>
+                            <DescThree>Combining front-end and back-end experiences, I can make a full-stack app with it's user interface and API using MERN stack</DescThree>
                         </Box>
                     </Fade>
                 </ServicesWrapper>

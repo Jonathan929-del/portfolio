@@ -156,7 +156,7 @@ const Highlight = styled.span`
 const ExperienceArea = styled.div`
     width:50%;
     display:flex;
-    margin-top:70px;
+    margin-top:30px;
     align-items:center;
     justify-content:space-between;
 
@@ -202,13 +202,44 @@ const Spec = styled.span`
         font-size:10px;
     }
 `
+const Link = styled.a`
+    width:200px;
+    display:flex;
+    color:#fff;
+    padding:5px 0;
+    font-size:17px;
+    font-weight:500;
+    margin-top:30px;
+    font-weight:400;
+    border-radius:5px;
+    align-items:center;
+    text-decoration:none;
+    justify-content:center;
+    transition:0.2s linear;
+    background-color:#08ceb1;
+
+    &:hover{
+        color:#08ceb1;
+        background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
+    }
+
+    @media screen and (max-width:500px){
+        padding:5px;
+        font-size:15px;
+    }
+    
+    @media screen and (max-width:350px){
+        width:150px;
+        font-size:12px;
+    }
+`
 
 
 
 
 
 // Main Function
-export default function About() {
+export default function About({styleDarkMode}) {
     return (
         <AboutSection id="about">
             <AboutContainer>
@@ -220,15 +251,15 @@ export default function About() {
                     <EastSide>
                         <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}><H2>Get To Know Me</H2></Fade>
                         <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}>
-                            <P>Hi There I Am <Highlight>Jonathan Adel</Highlight>,
-                                I Am A Professional Web Developer From Cairo, Egypt, With 3+ Years Of Experience In Web Development, Designing.
-                                Specifically Front-End, Back-End Development, And UI/UX Design.
-                                My Only Passion In The Last 3 Years Was To Learn How To Make Featured Web Pages With Clean And Effective Code In A Relatively Short Time, Which I Succeeded At.
-                                I Can Finish Your Project In A Short Time With A Relatively Low Budget.
-                                I Have Made A Ton Of Projects With High-Quality Code That You Can Check Down Below
-                                I Hope We Get To Work Together, Thanks For Checking Out!❤️
+                            <P>Hi there I am <Highlight>Jonathan Adel</Highlight>,
+                                I am specialized in web development industry usin MERN stack which is a full-stack technology used for building web apps which require a user interface,
+                                a server side, and a database, using <Highlight>ReactJs</Highlight> or <Highlight style={{marginRight:'2px'}}>NextJs</Highlight>
+                                as a front-end technology for creating creative designs, <Highlight>NodeJs</Highlight> and <Highlight style={{marginRight:'2px'}}>ExpressJs</Highlight>
+                                as a back-end technology, and <Highlight>MongoDb</Highlight> as a database.<br />
+                                I enjoyed making several projects with these technologies which gave me great experience in making efective and real-world apps.
                             </P>
                         </Fade>
+                        <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}><Link target='_blank' href="https://drive.google.com/file/d/1cpHDSX0D5JwCoQDTTB2O8m5U0yAqygEe/view?usp=sharing" styleDarkMode={styleDarkMode}>Download resume</Link></Fade>
                         <ExperienceArea>
                             <Fade bottom>
                                 <Exp>

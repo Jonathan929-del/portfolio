@@ -1,7 +1,7 @@
 // Imports
+import {useState} from 'react';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import {useEffect, useState} from 'react';
 import {DiDatabase} from 'react-icons/di';
 import {FaAngleDown} from 'react-icons/fa';
 import {VscBracketDot} from 'react-icons/vsc';
@@ -60,7 +60,6 @@ const SkillsHeading = styled.h1`
 const Dropdowns = styled.div`
     width:80%;
     display:grid;
-    height:500px;
     gap:30px 100px;
     margin-top:50px;
     transition:0.5s linear;
@@ -222,31 +221,32 @@ const AngleThree = styled(FaAngleDown)`
 `
 
 const LowerPartOne = styled.div`
-    width:80%;
-    height:60%;
+    width:90%;
     margin:auto;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    display:${({isOpenOne}) => isOpenOne ? 'flex' : 'none'};
-
-    @media screen and (max-width:768px){
-        height:75%;
-    }
+    row-gap:20px;
+    column-gap:40px;
+    justify-content:space-between;
+    grid-template-rows:repeat(4, 1fr);
+    grid-template-columns:repeat(2, 1fr);
+    display:${({isOpenOne}) => isOpenOne ? 'grid' : 'none'};
+    background-color:'red';
 
     @media screen and (max-width:500px){
-        height:60%;
+        row-gap:10px;
+        grid-template-rows:repeat(8, 1fr);
+        grid-template-columns:repeat(1, 1fr);
     }
 `
 
 const LowerPartTwo = styled.div`
-    width:80%;
-    height:60%;
+    width:90%;
     margin:auto;
-    display:flex;
+    row-gap:20px;
     flex-direction:column;
     justify-content:space-between;
-    display:${({isOpenTwo}) => isOpenTwo ? 'flex' : 'none'};
+    grid-template-rows:repeat(4, 1fr);
+    grid-template-columns:repeat(1, 1fr);
+    display:${({isOpenTwo}) => isOpenTwo ? 'grid' : 'none'};
 
     @media screen and (max-width:768px){
         height:75%;
@@ -381,7 +381,7 @@ export default function Skills({styleDarkMode}) {
                             <Skill>
                                 <SkillText>
                                     <SkillName>Css</SkillName>
-                                    <SkillPer>50%</SkillPer>
+                                    <SkillPer>85%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="50"/></SkillProg>
                             </Skill>
@@ -395,9 +395,37 @@ export default function Skills({styleDarkMode}) {
                             <Skill>
                                 <SkillText>
                                     <SkillName>ReactJs</SkillName>
+                                    <SkillPer>95%</SkillPer>
+                                </SkillText>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
+                            </Skill>
+                            <Skill>
+                                <SkillText>
+                                    <SkillName>NextJs</SkillName>
                                     <SkillPer>90%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
+                            </Skill>
+                            <Skill>
+                                <SkillText>
+                                    <SkillName>Tailwind</SkillName>
+                                    <SkillPer>65%</SkillPer>
+                                </SkillText>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="65"/></SkillProg>
+                            </Skill>
+                            <Skill>
+                                <SkillText>
+                                    <SkillName>Material UI</SkillName>
+                                    <SkillPer>50%</SkillPer>
+                                </SkillText>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="50"/></SkillProg>
+                            </Skill>
+                            <Skill>
+                                <SkillText>
+                                    <SkillName>Bootstap</SkillName>
+                                    <SkillPer>60%</SkillPer>
+                                </SkillText>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="60"/></SkillProg>
                             </Skill>
                         </LowerPartOne>
                     </DropdownOne>
@@ -435,10 +463,10 @@ export default function Skills({styleDarkMode}) {
                             </Skill>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>MySQL</SkillName>
-                                    <SkillPer>50%</SkillPer>
+                                    <SkillName>Rest APIs</SkillName>
+                                    <SkillPer>95%</SkillPer>
                                 </SkillText>
-                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="50"/></SkillProg>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="95"/></SkillProg>
                             </Skill>
                         </LowerPartTwo>
                     </DropdownTwo>
@@ -447,7 +475,7 @@ export default function Skills({styleDarkMode}) {
                             <Fade left>
                                 <Div>
                                     <DesignIcon />
-                                    <Title>Designer</Title>
+                                    <Title>Web design</Title>
                                 </Div>
                                 <AngleThree isOpenThree={isOpenThree}/>
                             </Fade>
@@ -455,17 +483,10 @@ export default function Skills({styleDarkMode}) {
                         <LowerPartThree isOpenThree={isOpenThree}>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>UI Design</SkillName>
-                                    <SkillPer>90%</SkillPer>
+                                    <SkillName>Figma</SkillName>
+                                    <SkillPer>60%</SkillPer>
                                 </SkillText>
-                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
-                            </Skill>
-                            <Skill>
-                                <SkillText>
-                                    <SkillName>UX Design</SkillName>
-                                    <SkillPer>80%</SkillPer>
-                                </SkillText>
-                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="80"/></SkillProg>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="60"/></SkillProg>
                             </Skill>
                         </LowerPartThree>
                     </DropdownThree>

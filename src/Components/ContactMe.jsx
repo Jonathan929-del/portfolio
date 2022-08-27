@@ -14,38 +14,28 @@ import {AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle, AiFillGithub} from
 // Styles
 const ContactSection = styled.section`
     width:100%;
-    height:100vh;
     display:flex;
+    min-height:50vh;
     align-items:center;
     justify-content:center;
-
-    @media screen and (max-width:992px){
-        height:120vh;
-    }
-
-    @media screen and (max-width:400px){
-        height:100vh;
-    }
 `
 
 const ContactContainer = styled.div`
     width:90%;
     height:85%;
     display:flex;
+    max-width:1000px;
     align-items:center;
     flex-direction:column;
+    justify-content:space-between;
 `
 
 const Heading = styled.h1`
     margin:auto;
     font-size:30px;
-    margin-top:50px;
+    margin:100px 0 50px 0;
     font-weight:300;
     position:relative;
-
-    @media screen and (max-width:992px){
-        margin-bottom:-20px;
-    }
 
     &::before{
         left:28%;
@@ -57,26 +47,23 @@ const Heading = styled.h1`
         content:'Get In Touch';
         border-bottom:1px solid #08ceb1;
     }
-
-    @media screen and (max-width:500px){
-        margin-top:0;
-    }
 `
 
 const ContactWrapper = styled.div`
     width:100%;
     height:85%;
     display:flex;
-    justify-content:space-between;
+    align-items:center;
+    justify-content:center;
 
     @media screen and (max-width:992px){
         flex-direction:column;
     }
 `
 
-const LeftSide = styled.div`
-    width:47%;
+const Container = styled.div`
     height:90%;
+    width:100%;
     display:flex;
     align-items:center;
     flex-direction:column;
@@ -93,12 +80,22 @@ const Top = styled.div`
     display:flex;
     align-items:flex-end;
     justify-content:space-between;
+
+    @media screen and (max-width:400px){
+        gap:10px;
+        display:grid;
+        justify-content:unset;
+        grid-template-row:repeat(2, 1fr);
+        grid-template-column:repeat(2, 1fr);
+        grid-template-areas:'first last' 'middle middle';
+    }
 `
 
-const Box = styled.div`
+const FirstBox = styled.div`
     width:31%;
-    height:60%;
+    height:200px;
     display:flex;
+    grid-area:first;
     border-radius:5px;
     align-items:center;
     flex-direction:column;
@@ -116,19 +113,43 @@ const Box = styled.div`
     }
 
     @media screen and (max-width:400px){
-        background-color:transparent;
+        width:unset;
+        height:150px;
+    }
+`
 
-        &:hover{
-            cursor:pointer;
-            transform:scale(1);
-        }
+const LastBox = styled.div`
+    width:31%;
+    height:200px;
+    display:flex;
+    grid-area:last;
+    border-radius:5px;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    transition:0.2s linear;
+    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
+
+    &:hover{
+        cursor:pointer;
+        transform:scale(1.1);
+    }
+
+    @media screen and (max-width:450px){
+        font-size:12px;
+    }
+
+    @media screen and (max-width:400px){
+        width:unset;
+        height:150px;
     }
 `
 
 const MiddleBox = styled.div`
     width:34%;
-    height:60%;
+    height:200px;
     display:flex;
+    grid-area:middle;
     border-radius:5px;
     align-items:center;
     flex-direction:column;
@@ -142,12 +163,8 @@ const MiddleBox = styled.div`
     }
 
     @media screen and (max-width:400px){
-        background-color:transparent;
-
-        &:hover{
-            cursor:pointer;
-            transform:scale(1);
-        }
+        width:unset;
+        height:150px;
     }
 `
 
@@ -190,404 +207,111 @@ const EmailText = styled.p`
 
 const Bottom = styled.div`
     width:70%;
-    height:30%;
+    height:100px;
     display:flex;
+    margin:50px 0;
     align-items:center;
     justify-content:space-between;
 
     @media screen and (max-width:400px){
-        width:85%;
-    }
-`
-
-const FacebookLink = styled.a`
-    font-size:30px;
-    position:relative;
-    transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-
-    &::before{
-        height:0;
-        top:-40%;
-        left:-55%;
-        opacity:0;
-        width:260%;
-        margin:auto;
-        font-size:12px;
-        color:#08ceb1;
-        position:absolute;
-        transition:0.2s linear;
-        content:'Jonathan Adel';
-    }
-
-    &:hover{
-        cursor:pointer;
-        color:#08ceb1;
-    }
-
-    &:hover::before{
-        opacity:1;
-    }
-
-    @media screen and (max-width:400px){
-        font-size:20px;
-
-        &::before{
-            top:-50%;
-            left:-100%;
-            width:400%;
-            font-size:10px;
-        }
-    }
-`
-
-const InstaLink = styled.a`
-    font-size:30px;
-    position:relative;
-    transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-
-    &::before{
-        height:0;
-        top:-35%;
-        left:-100%;
-        opacity:0;
-        width:260%;
-        margin:auto;
-        font-size:12px;
-        color:#08ceb1;
-        position:absolute;
-        transition:0.2s linear;
-        content:'@jonathanadelll';
-    }
-
-    &:hover{
-        cursor:pointer;
-        color:#08ceb1;
-    }
-
-    &:hover::before{
-        opacity:1;
-    }
-
-    @media screen and (max-width:400px){
-        font-size:20px;
-
-        &::before{
-            top:-50%;
-            left:-150%;
-            width:400%;
-            font-size:10px;
-        }
-    }
-`
-
-const LinkedLink = styled.a`
-    font-size:30px;
-    position:relative;
-    transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-
-    &::before{
-        height:0;
-        top:-35%;
-        left:-70%;
-        opacity:0;
-        width:260%;
-        margin:auto;
-        font-size:12px;
-        color:#08ceb1;
-        position:absolute;
-        transition:0.2s linear;
-        content:'Jonathan Adel';
-    }
-
-    &:hover{
-        cursor:pointer;
-        color:#08ceb1;
-    }
-
-    &:hover::before{
-        opacity:1;
-    }
-
-    @media screen and (max-width:400px){
-        font-size:20px;
-
-        &::before{
-            top:-50%;
-            left:-100%;
-            width:400%;
-            font-size:10px;
-        }
-    }
-`
-
-const TwitterLink = styled.a`
-    font-size:30px;
-    position:relative;
-    transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-
-    &::before{
-        height:0;
-        top:-40%;
-        left:-70%;
-        opacity:0;
-        width:260%;
-        margin:auto;
-        font-size:12px;
-        color:#08ceb1;
-        position:absolute;
-        transition:0.2s linear;
-        content:'@JonathanAdel3';
-    }
-
-    &:hover{
-        cursor:pointer;
-        color:#08ceb1;
-    }
-
-    &:hover::before{
-        opacity:1;
-    }
-
-    @media screen and (max-width:400px){
-        font-size:20px;
-
-        &::before{
-            top:-50%;
-            left:-100%;
-            width:400%;
-            font-size:10px;
-        }
-    }
-`
-
-const GithubLink = styled.a`
-    font-size:30px;
-    position:relative;
-    transition:0.2s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-
-    &::before{
-        height:0;
-        top:-40%;
-        left:-100%;
-        opacity:0;
-        width:350%;
-        margin:auto;
-        font-size:12px;
-        color:#08ceb1;
-        position:absolute;
-        transition:0.2s linear;
-        content:'Jonathan929-del';
-    }
-
-    &:hover{
-        cursor:pointer;
-        color:#08ceb1;
-    }
-
-    &:hover::before{
-        opacity:1;
-    }
-
-    @media screen and (max-width:400px){
-        font-size:20px;
-
-        &::before{
-            top:-50%;
-            left:-150%;
-            width:400%;
-            font-size:10px;
-        }
-    }
-`
-
-const RightSide = styled.div`
-    width:50%;
-    height:100%;
-    display:flex;
-    margin-top:15px;
-    align-items:center;
-    justify-content:center;
-
-    @media screen and (max-width:992px){
         width:100%;
-        height:50%;
+        justify-content:space-evenly;
     }
-
 `
 
-const Form = styled.form`
-    gap:20px;
-    width:100%;
-    height:55%;
-    display:grid;
-    grid-template-rows:repeat(8, 1fr);
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-areas:"name name email email" "name name email email" "message message message message" "message message message message" "message message message message" "message message message message" "button late-message late-message late-message" "button late-message late-message late-message";
-    
-    @media screen and (max-width:992px){
-        height:100%;
-        margin-top:50px;
-    }
 
-    @media screen and (max-width:600px){
-        gap:10px;
-        height:80%;
-    }
-
-    @media screen and (max-width:450px){
-        height:80%;
-    }
+const StyledLink = styled.a`
+    position:relative;
+    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
+`
+const FacebookContainer = styled.div`
+    left:-20px;
+    bottom:40px;
+    width:100px;
+    font-size:12px;
+    color:#08ceb1;
+    position:absolute;
 
     @media screen and (max-width:400px){
-        grid-template-rows:repeat(8, 1fr);
-        grid-template-columns:repeat(4, 1fr);
-        grid-template-areas:"name name email email" "name name email email" "message message message message" "message message message message" "message message message message" "message message message message" "button button button button" "late-message late-message late-message late-message";
-    }
-`
-
-const NameInput = styled.input`
-    border:none;
-    outline:none;
-    font-size:13px;
-    grid-area:name;
-    padding-left:10px;
-    border-radius:5px;
-    transition:0.3s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
-    border:${({styleDarkMode}) => styleDarkMode === 'true' ? '1px solid #1d1a22' : '1px solid #ebebeb'};
-
-    &:focus{
-        border:1px solid #08ceb1;
-    }
-
-    @media screen and (max-width:1100px){
-        font-size:12px;
-    }
-
-    @media screen and (max-width:450px){
-        font-size:10px;
-    }
-`
-
-const EmailInput = styled.input`
-    border:none;
-    outline:none;
-    font-size:13px;
-    grid-area:email;
-    padding-left:10px;
-    border-radius:5px;
-    transition:0.3s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
-    border:${({styleDarkMode}) => styleDarkMode === 'true' ? '1px solid #1d1a22' : '1px solid #ebebeb'};
-
-    &:focus{
-        border:1px solid #08ceb1;
-    }
-
-    @media screen and (max-width:1100px){
-        font-size:12px;
-    }
-
-    @media screen and (max-width:450px){
-        font-size:10px;
-    }
-`
-
-const MessageInput = styled.input`
-    border:none;
-    outline:none;
-    font-size:13px;
-    grid-area:message;
-    padding-left:20px;
-    border-radius:5px;
-    transition:0.3s linear;
-    color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-    background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
-    border:${({styleDarkMode}) => styleDarkMode === 'true' ? '1px solid #1d1a22' : '1px solid #ebebeb'};
-
-    &:focus{
-        border:1px solid #08ceb1;
-    }
-
-    @media screen and (max-width:450px){
-        font-size:10px;
-    }
-`
-
-const Button = styled.div`
-    border:none;
-    height:30px;
-    display:flex;
-    color:#fff;
-    padding:5px 0;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:500;
-    font-weight:400;
-    grid-area:button;
-    border-radius:5px;
-    align-items:center;
-    text-decoration:none;
-    justify-content:center;
-    transition:0.2s linear;
-    background-color:#08ceb1;
-
-    &:hover{
-        color:#08ceb1;
-        background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#fff' : '#000'};
-    }
-
-    @media screen and (max-width:992px){
-        width:150px;
-    }
-
-    @media screen and (max-width:600px){
-        width:100px;
-    }
-
-    @media screen and (max-width:450px){
-        width:75px;
-        height:30px;
-        font-size:13px;
-    }
-`
-
-const Message = styled.p`
-    opacity:0;
-    display:flex;
-    font-size:13px;
-    margin-top:10px;
-    transition:0.2s linear;
-    grid-area:late-message;
-    align-items:flex-start;
-    justify-content:flex-start;
-    animation:${({clicked}) => clicked ? 'send 2s linear backwards 1' : ''};
-
-    @keyframes send{
-        0%{
-            opacity:0;
-        }
-        100%{
-            opacity:1;
-        }
-    }
-
-    @media screen and (max-width:450px){
         font-size:11px;
     }
 `
-
-const Name = styled.span`
+const InstagramContainer = styled.div`
+    left:-35px;
+    bottom:40px;
+    width:100px;
+    font-size:12px;
     color:#08ceb1;
-    padding-left:5px;
-` 
+    position:absolute;
+
+    @media screen and (max-width:400px){
+        left:-30px;
+        font-size:11px;
+    }
+`
+const LinkedinContainer = styled.div`
+    left:-25px;
+    bottom:40px;
+    width:100px;
+    font-size:12px;
+    color:#08ceb1;
+    position:absolute;
+
+    @media screen and (max-width:400px){
+        font-size:11px;
+    }
+`
+const TwitterContainer = styled.div`
+    left:-30px;
+    bottom:40px;
+    width:100px;
+    font-size:12px;
+    color:#08ceb1;
+    position:absolute;
+
+    @media screen and (max-width:400px){
+        font-size:11px;
+    }
+`
+const GithubContainer = styled.div`
+    left:-35px;
+    bottom:40px;
+    width:100px;
+    font-size:12px;
+    color:#08ceb1;
+    position:absolute;
+
+    @media screen and (max-width:400px){
+        width:70px;
+        left:-25px;
+        font-size:9px;
+    }
+`
+const FacebookIconContainer = styled.div`
+    font-size:25px;
+    transition:0.2s linear;
+    color:${({isHovered}) => isHovered === 'facebook' ? '#08ceb1' : ''};
+`
+const InstagramIconContainer = styled.div`
+    font-size:25px;
+    transition:0.2s linear;
+    color:${({isHovered}) => isHovered === 'instagram' ? '#08ceb1' : ''};
+`
+const LinkedinIconContainer = styled.div`
+    font-size:25px;
+    transition:0.2s linear;
+    color:${({isHovered}) => isHovered === 'linkedin' ? '#08ceb1' : ''};
+`
+const TwitterIconContainer = styled.div`
+    font-size:25px;
+    transition:0.2s linear;
+    color:${({isHovered}) => isHovered === 'twitter' ? '#08ceb1' : ''};
+`
+const GithubIconContainer = styled.div`
+    font-size:25px;
+    transition:0.2s linear;
+    color:${({isHovered}) => isHovered === 'github' ? '#08ceb1' : ''};
+`
 
 
 
@@ -596,55 +320,93 @@ const Name = styled.span`
 // Main Function
 export default function ContactMe({styleDarkMode}) {
 
-    const [input, setInput] = useState('');
-    const [clicked, setClicked] = useState(false);
-    const ClickHandler = () => {
-        setClicked(!clicked);
+    const [isHovered, setIsHovered] = useState();
+    const hoverHandler = (link) => {
+        setIsHovered(link);
+    };
+    const leaveHandler = () => {
+        setIsHovered('');
     }
 
-  return (
-    <ContactSection id="contact-me">
-        <ContactContainer>
-            <Fade top>
-                <Heading>Contact Me</Heading>
-            </Fade>
-            <ContactWrapper>
-                <LeftSide>
-                        <Top>
-                            <Box styleDarkMode={styleDarkMode}>
-                                <Fade left><IconContainer><PhoneIcon /></IconContainer></Fade>
-                                <Fade left><Text>01207777636</Text></Fade>
-                            </Box>
-                            <MiddleBox styleDarkMode={styleDarkMode}>
-                                <Fade left><IconContainer><EmailIcon /></IconContainer></Fade>
-                                <Fade left><EmailText>jonathanadel98@gmail.com</EmailText></Fade>
-                            </MiddleBox>
-                            <Box styleDarkMode={styleDarkMode}>
-                                <Fade left><IconContainer><LocationIcon /></IconContainer></Fade>
-                                <Fade left><Text>Cairo, Egypt</Text></Fade>
-                            </Box>
-                        </Top>
-                        <Bottom>
-                            <Fade left>
-                                <FacebookLink href="https://www.facebook.com/profile.php?id=100058864790778" target="_blank" styleDarkMode={styleDarkMode}><BsFacebook /></FacebookLink>
-                                <InstaLink href="https://www.instagram.com/jonathanadelll/" target="_blank" styleDarkMode={styleDarkMode}><AiFillInstagram /></InstaLink>
-                                <LinkedLink href="https://www.linkedin.com/in/jonathan-adel-5b684620b/" target="_blank" styleDarkMode={styleDarkMode}><AiFillLinkedin /></LinkedLink>
-                                <TwitterLink href="https://twitter.com/JonathanAdel3" target="_blank" styleDarkMode={styleDarkMode}><AiFillTwitterCircle /></TwitterLink>
-                                <GithubLink href="https://github.com/Jonathan929-del" target="_blank"styleDarkMode={styleDarkMode}><AiFillGithub /></GithubLink>
-                            </Fade>
-                        </Bottom>
-                </LeftSide>
-                <RightSide>
-                    <Form>
-                        <NameInput placeholder="Enter Your Name" styleDarkMode={styleDarkMode} onChange={e => setInput(e.target.value)} maxLength="30"/>
-                        <EmailInput placeholder="Enter Your Email Address" styleDarkMode={styleDarkMode}/>
-                        <MessageInput placeholder="Enter Your Message" styleDarkMode={styleDarkMode}/>
-                        <Button styleDarkMode={styleDarkMode} onClick={ClickHandler}>Send</Button>
-                        <Message clicked={clicked}>Thanks <Name>{input}</Name>, We Will Respond ASAP❤️</Message>
-                    </Form>
-                </RightSide>
-            </ContactWrapper>
-        </ContactContainer>
-    </ContactSection>
-  )
+    return (
+        <ContactSection id="contact-me">
+            <ContactContainer>
+                <Fade top>
+                    <Heading>Contact Me</Heading>
+                </Fade>
+                <ContactWrapper>
+                    <Container>
+                            <Top>
+                                <FirstBox styleDarkMode={styleDarkMode}>
+                                    <Fade left><IconContainer><PhoneIcon /></IconContainer></Fade>
+                                    <Fade left><Text>01207777636</Text></Fade>
+                                </FirstBox>
+                                <MiddleBox styleDarkMode={styleDarkMode}>
+                                    <Fade left><IconContainer><EmailIcon /></IconContainer></Fade>
+                                    <Fade left><EmailText>jonathanadel98@gmail.com</EmailText></Fade>
+                                </MiddleBox>
+                                <LastBox styleDarkMode={styleDarkMode}>
+                                    <Fade left><IconContainer><LocationIcon /></IconContainer></Fade>
+                                    <Fade left><Text>Cairo, Egypt</Text></Fade>
+                                </LastBox>
+                            </Top>
+                            <Bottom>
+                                <Fade left>
+                                    <StyledLink href="https://www.facebook.com/profile.php?id=100058864790778" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('facebook')} onMouseLeave={leaveHandler}>
+                                        <FacebookIconContainer isHovered={isHovered}>
+                                            <BsFacebook />
+                                        </FacebookIconContainer>
+                                        {isHovered === 'facebook' &&
+                                            <FacebookContainer>
+                                                <Fade top duration={500}>Jonathan Adel</Fade>
+                                            </FacebookContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://www.instagram.com/jonathanadelll/" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('instagram')} onMouseLeave={leaveHandler}>
+                                        <InstagramIconContainer isHovered={isHovered}>
+                                            <AiFillInstagram />
+                                        </InstagramIconContainer>
+                                        {isHovered === 'instagram' &&
+                                            <InstagramContainer>
+                                                <Fade top duration={500}>@jonathanadelll</Fade>
+                                            </InstagramContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://www.linkedin.com/in/jonathan-adel-5b684620b/" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('linkedin')} onMouseLeave={leaveHandler}>
+                                        <LinkedinIconContainer isHovered={isHovered}>
+                                            <AiFillLinkedin />
+                                        </LinkedinIconContainer>
+                                        {isHovered === 'linkedin' &&
+                                            <LinkedinContainer>
+                                                <Fade top duration={500}>Jonathan Adel</Fade>
+                                            </LinkedinContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://twitter.com/JonathanAdel3" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('twitter')} onMouseLeave={leaveHandler}>
+                                        <TwitterIconContainer isHovered={isHovered}>
+                                            <AiFillTwitterCircle />
+                                        </TwitterIconContainer>
+                                        {isHovered === 'twitter' &&
+                                            <TwitterContainer>
+                                                <Fade top duration={500}>@JonathanAdel3</Fade>
+                                            </TwitterContainer>
+                                        }
+                                    </StyledLink>
+                                    <StyledLink href="https://github.com/Jonathan929-del" target="_blank" styleDarkMode={styleDarkMode} onMouseEnter={() => hoverHandler('github')} onMouseLeave={leaveHandler}>
+                                        <GithubIconContainer isHovered={isHovered}>
+                                            <AiFillGithub />
+                                        </GithubIconContainer>
+                                        {isHovered === 'github' &&
+                                            <GithubContainer>
+                                                <Fade top duration={500}>Jonathan929-del</Fade>
+                                            </GithubContainer>
+                                        }
+                                    </StyledLink>
+                                </Fade>
+                            </Bottom>
+                    </Container>
+                </ContactWrapper>
+            </ContactContainer>
+        </ContactSection>
+    )
 }
