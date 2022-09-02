@@ -104,7 +104,6 @@ const FirstBox = styled.div`
     background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
 
     &:hover{
-        cursor:pointer;
         transform:scale(1.1);
     }
 
@@ -131,7 +130,6 @@ const LastBox = styled.div`
     background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
 
     &:hover{
-        cursor:pointer;
         transform:scale(1.1);
     }
 
@@ -158,7 +156,6 @@ const MiddleBox = styled.div`
     background-color:${({styleDarkMode}) => styleDarkMode === 'true' ? '#1d1a22' : '#ebebeb'};
 
     &:hover{
-        cursor:pointer;
         transform:scale(1.1);
     }
 
