@@ -2,7 +2,7 @@
 import Fade from 'react-reveal/Fade';
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import ImgOne from '../Images/Portfolio Gallery/01.png';
+import ImgOne from '../Images/Portfolio Gallery/JoBook.png';
 
 
 
@@ -114,7 +114,7 @@ export default function Portfolio() {
                         <ItemOne>
                             <IamgeOne src={ImgOne}/>
                             <LayerOne isHoveredOne={isHoveredOne} target="_blank" onMouseOver={HoverHandlerOne} onMouseLeave={HoverHandlerOne} href="https://jobook.vercel.app/">
-                                Social Media
+                                Social Media App
                             </LayerOne>
                         </ItemOne>
                     </Fade>
