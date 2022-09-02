@@ -259,7 +259,7 @@ export default function About({styleDarkMode}) {
                                 I enjoyed making several projects with these technologies which gave me great experience in making effective and real-world apps.
                             </P>
                         </Fade>
-                        <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}><Link target='_blank' href="https://drive.google.com/file/d/15-eXJySQJCe0PbG-50ZVgs58qN63D8CG/view?usp=sharing" styleDarkMode={styleDarkMode}>Download resume</Link></Fade>
+                        <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}><Link target='_blank' href="https://drive.google.com/file/d/15-eXJySQJCe0PbG-50ZVgs58qN63D8CG/view" styleDarkMode={styleDarkMode}>Download resume</Link></Fade>
                         <ExperienceArea>
                             <Fade bottom>
                                 <Exp>
