@@ -252,7 +252,7 @@ export default function About({styleDarkMode}) {
                         <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}><H2>Get To Know Me</H2></Fade>
                         <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}>
                             <P>Hi there I am <Highlight>Jonathan Adel</Highlight>,
-                                I am specialized in web development industry usin MERN stack which is a full-stack technology used for building web apps which require a user interface,
+                                I am specialized in web development industry using MERN stack which is a full-stack technology used for building web apps which require a user interface,
                                 a server side, and a database, using <Highlight>ReactJs</Highlight> or <Highlight style={{marginRight:'2px'}}>NextJs</Highlight>
                                 as a front-end technology for creating creative designs, <Highlight>NodeJs</Highlight> and <Highlight style={{marginRight:'2px'}}>ExpressJs</Highlight>
                                 as a back-end technology, and <Highlight>MongoDb</Highlight> as a database.<br />
