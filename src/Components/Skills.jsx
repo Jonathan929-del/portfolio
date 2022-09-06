@@ -383,7 +383,7 @@ export default function Skills({styleDarkMode}) {
                                     <SkillName>Css</SkillName>
                                     <SkillPer>85%</SkillPer>
                                 </SkillText>
-                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="50"/></SkillProg>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="85"/></SkillProg>
                             </Skill>
                             <Skill>
                                 <SkillText>
