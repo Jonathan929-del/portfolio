@@ -121,7 +121,7 @@ export default function PopUpNav({styleDarkMode, isOpened, OpenHandler, ThemeHan
                     <Li><Link href="#about" styleDarkMode={styleDarkMode} onClick={OpenHandler}>About</Link></Li>
                     <Li><Link href="#skills" styleDarkMode={styleDarkMode} onClick={OpenHandler}>Skills</Link></Li>
                     <Li><Link href="#services" styleDarkMode={styleDarkMode} onClick={OpenHandler}>Services</Link></Li>
-                    {/* <Li><Link href="#portfolio" styleDarkMode={styleDarkMode} onClick={OpenHandler}>Portfolio</Link></Li> */}
+                    <Li><Link href="#portfolio" styleDarkMode={styleDarkMode} onClick={OpenHandler}>Portfolio</Link></Li>
                     <Li><Link href="#contact-me" styleDarkMode={styleDarkMode} onClick={OpenHandler}>Contact Me</Link></Li>
                 </Ul>
                 <ModeHandler onClick={OpenHandler}>{styleDarkMode === 'true' ? <Sun onClick={ThemeHandler}/> : <Moon onClick={ThemeHandler}/>}</ModeHandler>
