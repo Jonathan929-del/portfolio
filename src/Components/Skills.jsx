@@ -4,8 +4,8 @@ import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
 import {DiDatabase} from 'react-icons/di';
 import {FaAngleDown} from 'react-icons/fa';
+import {MdPhoneIphone} from 'react-icons/md';
 import {VscBracketDot} from 'react-icons/vsc';
-import {AiOutlineAreaChart} from 'react-icons/ai';
 
 
 
@@ -152,7 +152,7 @@ const BackEndIcon = styled(DiDatabase)`
     }
 `
 
-const DesignIcon = styled(AiOutlineAreaChart)`
+const DesignIcon = styled(MdPhoneIphone)`
     font-size:30px;
     color:#08ceb1;
 
@@ -475,7 +475,7 @@ export default function Skills({styleDarkMode}) {
                             <Fade left>
                                 <Div>
                                     <DesignIcon />
-                                    <Title>Web design</Title>
+                                    <Title>Mobile App Development</Title>
                                 </Div>
                                 <AngleThree isOpenThree={isOpenThree}/>
                             </Fade>
@@ -483,10 +483,10 @@ export default function Skills({styleDarkMode}) {
                         <LowerPartThree isOpenThree={isOpenThree}>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>Figma</SkillName>
-                                    <SkillPer>60%</SkillPer>
+                                    <SkillName>React Native</SkillName>
+                                    <SkillPer>90%</SkillPer>
                                 </SkillText>
-                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="60"/></SkillProg>
+                                <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
                             </Skill>
                         </LowerPartThree>
                     </DropdownThree>

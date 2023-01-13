@@ -302,7 +302,7 @@ const Layer = styled.div`
 // Main Function
 export default function LandingPage({styleDarkMode}) {
 
-    const profs = ['Front-end developer', 'Back-end developer', 'Web designer', 'Freelancer'];
+    const profs = ['Front-end developer', 'Back-end developer', 'Mobile App Developer', 'Web designer', 'Freelancer'];
 
     return (
         <LandingPageContainer id="home">
@@ -311,7 +311,7 @@ export default function LandingPage({styleDarkMode}) {
                     <Fade left delay={0}><P styleDarkMode={styleDarkMode}>Hi There, I Am</P></Fade>
                     <Fade left delay={200}><H1>Jonathan Adel</H1></Fade>
                     <Fade left delay={400}><Profession><Typewriter words={profs} loop="0" typeSpeed="50" /></Profession></Fade>
-                    <Fade left delay={600}><Desc>Full-stack web developer using MERN stack, with high experience in dealing with databases and server side building with NodeJs.</Desc></Fade>
+                    <Fade left delay={600}><Desc>Full-stack web developer using MERN stack, mobile app developer using react native, with high experience in dealing with databases and server side building with NodeJs.</Desc></Fade>
                     <Fade left delay={800}><Link href="/#contact-me" styleDarkMode={styleDarkMode}>Contact Me <Send /></Link></Fade>
                 </WestSide>
                 <EastSide>

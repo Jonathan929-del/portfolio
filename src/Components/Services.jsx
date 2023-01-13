@@ -1,8 +1,9 @@
 // Imports
 import Fade from 'react-reveal/Fade';
-import styled from "styled-components";
+import styled from 'styled-components';
 import {BiCodeAlt} from 'react-icons/bi';
-import {AiFillDatabase, AiOutlineDesktop} from 'react-icons/ai';
+import {FaMobileAlt} from 'react-icons/fa';
+import {AiFillDatabase} from 'react-icons/ai';
 
 
 
@@ -105,7 +106,7 @@ const IconTwo = styled(AiFillDatabase)`
     }
 `
 
-const IconThree = styled(AiOutlineDesktop)`
+const IconThree = styled(FaMobileAlt)`
     font-size:40px;
     margin-top:20px;
 
@@ -243,21 +244,21 @@ export default function Services() {
                         <Box>
                             <IconOne />
                             <Title>Front-end development</Title>
-                            <DescOne>I am a professional front-end web developer, I build the user interface of the web page using Html, Css, JavaScript and other technologies like ReactJs, in addition of Css libraries like Bootstarp</DescOne>
+                            <DescOne>I am a professional front-end web developer, I build the user interface of the web page using Html, Css, JavaScript and other technologies like ReactJs, in addition of Css libraries like Bootstarp.</DescOne>
                         </Box>
                     </Fade>
                     <Fade bottom>
                         <Box>
                             <IconTwo />
                             <Title>Back-end development</Title>
-                            <DescTwo>Specialized in NodeJs, ExpressJs and MongoDb to make a Rest API linked to a database to connect to the client side to make a fully dynamic website</DescTwo>
+                            <DescTwo>Specialized in NodeJs, ExpressJs and MongoDb to make a Rest API linked to a database to connect to the client side to make a fully dynamic website.</DescTwo>
                         </Box>
                     </Fade>
                     <Fade right distance="90px">
                         <Box>
                             <IconThree />
-                            <Title>Full-stack development</Title>
-                            <DescThree>Combining front-end and back-end experiences, I can make a full-stack app with it's user interface and API using MERN stack</DescThree>
+                            <Title>Mobile app development</Title>
+                            <DescThree>Using react native which is react based technology, since I have great experience in react, I found it easy to start developing mobile apps using react native.</DescThree>
                         </Box>
                     </Fade>
                 </ServicesWrapper>

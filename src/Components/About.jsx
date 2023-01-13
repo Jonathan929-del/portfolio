@@ -255,7 +255,8 @@ export default function About({styleDarkMode}) {
                                 I am specialized in web development industry using MERN stack which is a full-stack technology used for building web apps that require a user interface,
                                 a server-side, and a database, using <Highlight>ReactJs</Highlight> or <Highlight style={{marginRight:'2px'}}>NextJs</Highlight>
                                 as a front-end technology for creating creative designs, <Highlight>NodeJs</Highlight> and <Highlight style={{marginRight:'2px'}}>ExpressJs</Highlight>
-                                as a back-end technology, and <Highlight>MongoDB</Highlight> as a database.<br />
+                                as a back-end technology, and <Highlight>MongoDB</Highlight> as a database.
+                                I am also a mobile app developer using <Highlight>React Native</Highlight>.
                                 I enjoyed making several projects with these technologies which gave me great experience in making effective and real-world apps.
                             </P>
                         </Fade>
