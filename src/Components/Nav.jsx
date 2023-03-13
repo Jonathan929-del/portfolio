@@ -132,7 +132,7 @@ export default function Nav({styleDarkMode, ThemeHandler, OpenHandler}) {
                     <NavLi><Fade top><NavLink href="#about" styleDarkMode={styleDarkMode}>About</NavLink></Fade></NavLi>
                     <NavLi><Fade top><NavLink href="#skills" styleDarkMode={styleDarkMode}>Skills</NavLink></Fade></NavLi>
                     <NavLi><Fade top><NavLink href="#services" styleDarkMode={styleDarkMode}>Services</NavLink></Fade></NavLi>
-                    {/* <NavLi><Fade top><NavLink href="#portfolio" styleDarkMode={styleDarkMode}>Portfolio</NavLink></Fade></NavLi> */}
+                    <NavLi><Fade top><NavLink href="#portfolio" styleDarkMode={styleDarkMode}>Portfolio</NavLink></Fade></NavLi>
                     <NavLi><Fade top><NavLink href="#contact-me" styleDarkMode={styleDarkMode}>Contact</NavLink></Fade></NavLi>
                     <Fade top><ModeContainer>{styleDarkMode === 'true' ? <BsFillSunFill onClick={ThemeHandler}/> : <BsFillMoonFill onClick={ThemeHandler}/>}</ModeContainer></Fade>
                 </NavUl>

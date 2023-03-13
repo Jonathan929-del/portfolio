@@ -31,7 +31,7 @@ export default function MainPage({styleDarkMode, ThemeHandler}) {
             <About styleDarkMode={styleDarkMode}/>
             <Skills styleDarkMode={styleDarkMode}/>
             <Services styleDarkMode={styleDarkMode}/>
-            {/* <Portfolio styleDarkMode={styleDarkMode}/> */}
+            <Portfolio styleDarkMode={styleDarkMode}/>
             <ContactMe styleDarkMode={styleDarkMode}/>
             <Footer styleDarkMode={styleDarkMode}/>
         </div>

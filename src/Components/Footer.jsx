@@ -46,7 +46,7 @@ export default function Footer({styleDarkMode}) {
   return (
     <FooterContainer styleDarkMode={styleDarkMode}>
         <Fade bottom>
-            Copyright © 2022 All Right Reserved | Made With ❤️ By <Name>Jonathan</Name>
+            Copyright © <p style={{marginRight:5}}>{new Date().getFullYear()}</p> All Right Reserved | Made With ❤️ By <Name>Jonathan</Name>
         </Fade>
       </FooterContainer>
   )
