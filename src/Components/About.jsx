@@ -253,8 +253,8 @@ export default function About({styleDarkMode}) {
                         <Fade right distance={window.innerWidth > 1285 ? '100px' : '10px'}>
                             <P>Hi there I am <Highlight>Jonathan Adel</Highlight>,
                                 I am specialized in web development industry using MERN stack which is a full-stack technology used for building web apps that require a user interface,
-                                a server-side, and a database, using <Highlight>ReactJs</Highlight> or <Highlight style={{marginRight:'2px'}}>NextJs</Highlight>
-                                as a front-end technology for creating creative designs, <Highlight>NodeJs</Highlight> and <Highlight style={{marginRight:'2px'}}>ExpressJs</Highlight>
+                                a server-side, and a database, using <Highlight>React.js</Highlight> or <Highlight style={{marginRight:'2px'}}>Next.js 13</Highlight>
+                                as a front-end technology for creating creative designs, <Highlight>Node.js</Highlight> and <Highlight style={{marginRight:'2px'}}>Express.js</Highlight>
                                 as a back-end technology, and <Highlight>MongoDB</Highlight> as a database.
                                 I am also a mobile app developer using <Highlight>React Native</Highlight>.
                                 I enjoyed making several projects with these technologies which gave me great experience in making effective and real-world apps.
@@ -264,13 +264,13 @@ export default function About({styleDarkMode}) {
                         <ExperienceArea>
                             <Fade bottom>
                                 <Exp>
-                                    <Number>03+</Number>
+                                    <Number>04+</Number>
                                     <Spec>Years Experience</Spec>
                                 </Exp>
                             </Fade>
                             <Fade right distance={window.innerWidth > 768 ? '100px' : '0'}>
                                 <Exp>
-                                    <Number>08+</Number>
+                                    <Number>20+</Number>
                                     <Spec>Projects Done</Spec>
                                 </Exp>
                             </Fade>

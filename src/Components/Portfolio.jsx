@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import ImgOne from '../Images/Portfolio Gallery/Social Media.png';
+import ImgTwo from '../Images/Portfolio Gallery/threads.png';
 
 
 
@@ -54,25 +55,24 @@ const PortfolioWrapper = styled.div`
     align-items:center;
     justify-content:center;
 
+    @media screen and (max-width:768px){
+        height:50%;
+        flex-direction:column;
+    }
+
     @media screen and (max-width:350px){
         height:100%;
     }
 `
 const ItemOne = styled.div`
+    flex:1;
     border-radius:5px;
     position:relative;
 `
 const IamgeOne = styled.img`
-    width:500px;
+    height:auto;
+    max-width:100%;
     border-radius:5px;
-
-    @media screen and (max-width:580px){
-        width:300px;
-    }
-
-    @media screen and (max-width:380px){
-        width:250px;
-    }
 `
 const LayerOne = styled.a`
     top:0;
@@ -92,6 +92,34 @@ const LayerOne = styled.a`
     background-color:#000000bd;
     opacity:${({isHoveredOne}) => isHoveredOne ? '1' : '0'};
 `
+const ItemTwo = styled.div`
+    flex:1;
+    border-radius:5px;
+    position:relative;
+`
+const IamgeTwo = styled.img`
+    height:auto;
+    max-width:100%;
+    border-radius:5px;
+`
+const LayerTwo = styled.a`
+    top:0;
+    left:0;
+    z-index:2;
+    width:100%;
+    height:98%;
+    display:flex;
+    color:#fff;
+    cursor:pointer;
+    border-radius:5px;
+    position:absolute;
+    align-items:center;
+    text-decoration:none;
+    transition:0.2s linear;
+    justify-content:center;
+    background-color:#000000bd;
+    opacity:${({isHoveredTwo}) => isHoveredTwo ? '1' : '0'};
+`
 
 
 
@@ -101,9 +129,13 @@ const LayerOne = styled.a`
 export default function Portfolio() {
 
     const [isHoveredOne, setIsHoveredOne] = useState(false);
+    const [isHoveredTwo, setIsHoveredTwo] = useState(false);
     const HoverHandlerOne = () => {
         setIsHoveredOne(!isHoveredOne);
-    }
+    };
+    const HoverHandlerTwo = () => {
+        setIsHoveredTwo(!isHoveredTwo);
+    };
 
   return(
         <PortfolioSection id="portfolio">
@@ -113,10 +145,16 @@ export default function Portfolio() {
                     <Fade bottom>
                         <ItemOne>
                             <IamgeOne src={ImgOne}/>
-                            <LayerOne isHoveredOne={isHoveredOne} target="_blank" onMouseOver={HoverHandlerOne} onMouseLeave={HoverHandlerOne} href="https://social-media-jonathan929-del.vercel.app/">
+                            <LayerOne isHoveredOne={isHoveredOne} target="_blank" onMouseOver={HoverHandlerOne} onMouseLeave={HoverHandlerOne} href='https://social-media-jonathan929-del.vercel.app/'>
                                 Social Media App
                             </LayerOne>
                         </ItemOne>
+                        <ItemTwo>
+                            <IamgeTwo src={ImgTwo}/>
+                            <LayerTwo isHoveredTwo={isHoveredTwo} target="_blank" onMouseOver={HoverHandlerTwo} onMouseLeave={HoverHandlerTwo} href='https://threads-two-beryl.vercel.app/'>
+                                Threads
+                            </LayerTwo>
+                        </ItemTwo>
                     </Fade>
                 </PortfolioWrapper>
             </PortfolioContainer>

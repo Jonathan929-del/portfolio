@@ -244,14 +244,14 @@ export default function Services() {
                         <Box>
                             <IconOne />
                             <Title>Front-end development</Title>
-                            <DescOne>I am a professional front-end web developer, I build the user interface of the web page using Html, Css, JavaScript and other technologies like ReactJs, in addition of Css libraries like Bootstarp.</DescOne>
+                            <DescOne>I am a professional front-end web developer, I build the user interface of the web page using Html, Css, JavaScript and other technologies like React.js, in addition of Css libraries like Tailwind.</DescOne>
                         </Box>
                     </Fade>
                     <Fade bottom>
                         <Box>
                             <IconTwo />
                             <Title>Back-end development</Title>
-                            <DescTwo>Specialized in NodeJs, ExpressJs and MongoDb to make a Rest API linked to a database to connect to the client side to make a fully dynamic website.</DescTwo>
+                            <DescTwo>Specialized in Node.js, Express.js and MongoDb to make a Rest API linked to a database to connect to the client side to make a fully dynamic website.</DescTwo>
                         </Box>
                     </Fade>
                     <Fade right distance="90px">

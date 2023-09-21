@@ -394,14 +394,14 @@ export default function Skills({styleDarkMode}) {
                             </Skill>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>ReactJs</SkillName>
+                                    <SkillName>React.js</SkillName>
                                     <SkillPer>95%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
                             </Skill>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>NextJs</SkillName>
+                                    <SkillName>Next.js 13</SkillName>
                                     <SkillPer>90%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
@@ -442,14 +442,14 @@ export default function Skills({styleDarkMode}) {
                         <LowerPartTwo isOpenTwo={isOpenTwo}>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>NodeJs</SkillName>
+                                    <SkillName>Node.js</SkillName>
                                     <SkillPer>80%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="80"/></SkillProg>
                             </Skill>
                             <Skill>
                                 <SkillText>
-                                    <SkillName>ExpressJs</SkillName>
+                                    <SkillName>Express.js</SkillName>
                                     <SkillPer>90%</SkillPer>
                                 </SkillText>
                                 <SkillProg styleDarkMode={styleDarkMode}><ActualProg per="90"/></SkillProg>
